@@ -12,7 +12,7 @@ function check_number {
   fi
 }
 
-number_files=$(ls | wc -l)
+number_files=$(ls -l | egrep ^- | wc -l)
 guess=-1
 
 echo Guess the number of files in the current directory
